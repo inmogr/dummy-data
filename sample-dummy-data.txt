@@ -1,0 +1,19 @@
+query {
+  allProject(last:7) {
+    edges {
+      node {
+        _id,
+        lastRecalcDate,
+        tasks {
+          edges {
+            node {
+              _id,
+              taskName,
+              targetDrtnHrCnt,
+            }
+          }
+        }
+      }
+    }
+  }
+}
